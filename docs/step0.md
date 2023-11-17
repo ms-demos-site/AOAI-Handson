@@ -20,16 +20,6 @@
 会社から Azure Subscription の払い出しを受けるための手順については、所属する企業毎に異なる要件がありますので、まずは社内の IT 担当者やクラウドの担当者の方にご相談ください。
 もし、会社から Azure Subscription の払い出しを受けられない場合には、次項にオプションとして、Azure の無償アカウントの作り方を紹介しますので、参考にしてください。
 
-<details><summary>折りたたまれるタイトル</summary>
-<pre>
-<code>
-折りたたまれる部分
-折りたたまれる部分
-折りたたまれる部分
-</code>
-</pre>
-</details>
-
 ### Azure 無償評価版の作成方法
 Azure 無料評価版は、下記のリンクを開いた先にある「無料で始める」というリンクから手続きを進めることで利用開始が可能です。
 
@@ -57,7 +47,41 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 
 !> 正しく企業アカウントで申請をいただいた場合、承認に要する時間は凡そ 1 営業日以内になる場合が多いです（筆者個人の過去の経験則であり、公式情報ではありません。）
 
+## セットアップガイド
+
+#### クラウド実行環境
+このデモをデプロイすると以下のリソースが Azure サブスクリプション上に作成されます。
+| サービス名 | SKU | Note |
+| --- | --- | --- |
+|Azure App Service|S1||
+|Azure OpenAI Service|S0|gpt-3.5-turbo gpt-3.5-turbo-16k|
+|Azure Cognitive Search|S1||
+|Azure Cosmos DB|プロビジョニング済みスループット||
+|Azure Form Recgonizer|S0||
+|Azure Blob Storage|汎用v2|ZRS|
+|Azure Application Insights||ワークスペース　ベース|
+|Azure Log Analytics|||
+
+#### クラウド開発環境
+
+<details><summary>詳細</summary>
+<pre>
+<code>
+
+### Cloud Shell
+
+</code>
+</pre>
+</details>
+
+#### ローカル開発環境
+
+<details><summary>詳細</summary>
+<pre>
+<code>
+
 ## Azure CLI の準備
+
 ### Azure CLI のインストール
 Azure CLI のインストール方法は、OS によって様々です。
 詳細については[Azure CLI をインストールする方法](https://learn.microsoft.com/ja-jp/cli/azure/install-azure-cli) のドキュメントを確認いただき、自身の利用されている OS に合った方法でセットアップをお願いします。
@@ -251,22 +275,7 @@ Azure 開発用に VS Code をセットアップする方法はこちらにも�
 Azure 開発用に Visual Studio Code を構成する<br>
 https://learn.microsoft.com/ja-jp/dotnet/azure/configure-vs-code
 
-## セットアップガイド
-
-#### クラウド実行環境
-このデモをデプロイすると以下のリソースが Azure サブスクリプション上に作成されます。
-| サービス名 | SKU | Note |
-| --- | --- | --- |
-|Azure App Service|S1||
-|Azure OpenAI Service|S0|gpt-3.5-turbo gpt-3.5-turbo-16k|
-|Azure Cognitive Search|S1||
-|Azure Cosmos DB|プロビジョニング済みスループット||
-|Azure Form Recgonizer|S0||
-|Azure Blob Storage|汎用v2|ZRS|
-|Azure Application Insights||ワークスペース　ベース|
-|Azure Log Analytics|||
-
-#### ローカル開発環境
+#### ローカル開発環境 ----
 このデモをデプロイするためには、ローカルに以下の開発環境が必要です。
 > **重要** このサンプルは Windows もしくは Linux 環境で動作します。ただし、WSL2 の環境では正常に動作しません。
 - [Azure Developer CLI](https://aka.ms/azure-dev/install) （version 1.0.2以降推奨）
@@ -343,3 +352,6 @@ GPT-4 モデルは、チャット機能、文書検索機能のオプション�
 必要に応じて、Azure AD に対応した Easy Auth を設定します。Easy Auth を設定した場合、UI の右上にログインユーザのアカウント名が表示され、チャットの履歴ログにもアカウント名が記録されます。
 Easy Auth の設定は、[こちら](https://learn.microsoft.com/ja-jp/azure/app-service/scenario-secure-app-authentication-app-service)を参考にしてください。
 
+</code>
+</pre>
+</details>
