@@ -80,6 +80,7 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 | [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
 | [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
 
+
 </code>
 </pre>
 </details>
@@ -102,6 +103,7 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 | pip ( Pythonと一緒にインストール ) | `pip --version` | 23.1.2 以降 |
 | [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
 | [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
+
 
 ## Azure CLI の準備
 
@@ -316,15 +318,16 @@ GPT-4 モデルは、チャット機能、文書検索機能のオプション�
 必要に応じて、Azure AD に対応した Easy Auth を設定します。Easy Auth を設定した場合、UI の右上にログインユーザのアカウント名が表示され、チャットの履歴ログにもアカウント名が記録されます。
 Easy Auth の設定は、[こちら](https://learn.microsoft.com/ja-jp/azure/app-service/scenario-secure-app-authentication-app-service)を参考にしてください。
 
-# 補足情報
-## VS Code で Python を利用可能にするところまでのトレーニング
+
+## 補足情報
+### VS Code で Python を利用可能にするところまでのトレーニング
 Microsoft Learn に VS Code に Python をセットアップする部分をまとめた技術トレーニングがありました。
 こちらも是非参考にしてみてください。
 
 Visual Studio Code で Python を使ってみる<br>
 https://learn.microsoft.com/ja-jp/training/modules/python-install-vscode/
 
-## VS Code で Azure にアクセスする部分の公式ドキュメント
+### VS Code で Azure にアクセスする部分の公式ドキュメント
 Azure 開発用に VS Code をセットアップする方法はこちらにもまとまっていますのでご確認ください。
 
 Azure 開発用に Visual Studio Code を構成する<br>
