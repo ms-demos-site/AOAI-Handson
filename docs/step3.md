@@ -9,14 +9,14 @@ npm run build
 ```
 
 ### Pythonコードのデプロイ
-ビルドされたフロントエンドのコードと一緒に、PythonのアプリケーションコードをAzure Web Appにデプロイします。
+ビルドされたフロントエンドのコードと一緒に、PythonのアプリケーションコードをAzure Container Apps にデプロイします。
 ```PowerShell
 $ENV:AZURE_WEBAPP_RESOURCE_GROUP = "rg-${ENV:AZURE_ENV_NAME}"
-$ENV:WEBAPP_NAME = "xxx" # Azureリソースの作成時に作成されているリソースの名前
+$ENV:WEBAPPENV_NAME = "xxx" # Azureリソースの作成時に作成されているリソースの名前
 
 cd jp-azureopenai-samples/5.internal-document-search/src/backend
-zip -r app.zip .
-az webapp deployment source config-zip --resource-group $ENV:AZURE_WEBAPP_RESOURCE_GROUP --name $ENV:WEBAPP_NAME --src ./app.zip
+
+az containerapp up --name ca-backend-kpetyard22vku --resource-group $ENV:AZURE_WEBAPP_RESOURCE_GROUP --location $ENV:LOC --environment $ENV:WEBAPPENV_NAME --source .
 ```
 
 コマンドの実行が終了すると、アプリケーションにアクセスする為の URL が表示されます。この URL をブラウザで開き、サンプルアプリケーションの利用を開始してください
