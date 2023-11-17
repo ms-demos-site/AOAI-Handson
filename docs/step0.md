@@ -64,7 +64,6 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 #### クラウド開発環境
 
 <details><summary>詳細</summary>
-<pre>
 
 ## Cloud Shell
 
@@ -80,13 +79,11 @@ Azure Cloud Shellに、以下が事前にインストールされていること
 | [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
 | [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
 
-</pre>
 </details>
 
 #### ローカル開発環境（オプション）
 
 <details><summary>詳細</summary>
-<pre>
 
 ## ツール
 このデモをデプロイするためには、ローカルに以下の開発環境が必要です。
@@ -329,6 +326,4 @@ Azure 開発用に VS Code をセットアップする方法はこちらにも�
 Azure 開発用に Visual Studio Code を構成する<br>
 https://learn.microsoft.com/ja-jp/dotnet/azure/configure-vs-code
 
-
-</pre>
 </details>
