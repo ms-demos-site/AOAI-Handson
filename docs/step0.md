@@ -66,10 +66,12 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 <details><summary>詳細</summary>
 <pre>
 <code>
+
 ## Cloud Shell
 
 ### ツール
-このデモをデプロイするためには、以下のツールが必要です。Azure Cloud Shellに、以下が事前にインストールされていることをご確認ください。PowerShellを前提としています。
+このデモをデプロイするためには、以下のツールが必要です。
+Azure Cloud Shellに、以下が事前にインストールされていることをご確認ください。PowerShellを前提としています。
 
 | ツール名 | 確認コマンド | 推奨バージョン |
 | --- | --- | --- |
@@ -88,6 +90,7 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 <details><summary>詳細</summary>
 <pre>
 <code>
+
 ## ツール
 このデモをデプロイするためには、ローカルに以下の開発環境が必要です。
 !> **重要** このサンプルは Windows もしくは Linux 環境で動作します。ただし、WSL2 の環境では正常に動作しません。
