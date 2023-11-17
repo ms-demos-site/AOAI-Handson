@@ -15,7 +15,7 @@ $ENV:DEP_NAME = "deployment-name" # The deployment name
 $ENV:AZURE_ENV_NAME = "azureenvnameXXX" # XXX は作業者毎ユニークな文字列をセット。リソースグループ名のSuffix (rg-$ENV:AZURE_ENV_NAMEになる) 
 ```
 
-> 補足: YOUR-USER-IDの取得方法例: `Azure Portal > Azure AD > Users > 自分の名前で検索 > Object ID` をコピーしてください。
+?> 補足: YOUR-USER-IDの取得方法例: `Azure Portal > Azure AD > Users > 自分の名前で検索 > Object ID` をコピーしてください。
 
 
 ### 権限確認

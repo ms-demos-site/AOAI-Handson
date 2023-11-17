@@ -66,7 +66,6 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 <details><summary>詳細</summary>
 <pre>
 <code>
-
 ## Cloud Shell
 
 ### ツール
@@ -80,7 +79,6 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 | [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
 | [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
 
-
 </code>
 </pre>
 </details>
@@ -90,10 +88,9 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 <details><summary>詳細</summary>
 <pre>
 <code>
-
 ## ツール
 このデモをデプロイするためには、ローカルに以下の開発環境が必要です。
-> **重要** このサンプルは Windows もしくは Linux 環境で動作します。ただし、WSL2 の環境では正常に動作しません。
+!> **重要** このサンプルは Windows もしくは Linux 環境で動作します。ただし、WSL2 の環境では正常に動作しません。
 
 | ツール名 | 確認コマンド | 推奨バージョン | 
 | --- | --- | --- |
@@ -103,7 +100,6 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 | pip ( Pythonと一緒にインストール ) | `pip --version` | 23.1.2 以降 |
 | [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
 | [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
-
 
 ## Azure CLI の準備
 
@@ -239,7 +235,7 @@ https://nodejs.org/en/download
 
 [Git CLI のダウンロードサイト](https://git-scm.com/downloads) からお使いの OS にあわせた Git CLI のバージョンをダウンロードしてインストールしてください。
 
-> インストール時に色々聞かれますが、基本的には全てデフォルト設定で問題ないはずです。
+?> インストール時に色々聞かれますが、基本的には全てデフォルト設定で問題ないはずです。
 
 ## PowerShell 7 のインストール
 Windows 環境でハンズオンを実施中の方は、PowerShell 7 のセットアップも必要です。
@@ -259,7 +255,7 @@ https://github.com/PowerShell/PowerShell/releases/tag/v7.3.6
 Download Visual Studio Code<br>
 https://code.visualstudio.com/download
 
-> VS Code のセットアップ時に、以下の追加タスクのダイアログの、上二つのチェックボックス（[Code で開く] アクションを追加する）にチェックを入れておくと、あとから VS Code を開くときに楽になりますのでおススメです。
+?> VS Code のセットアップ時に、以下の追加タスクのダイアログの、上二つのチェックボックス（[Code で開く] アクションを追加する）にチェックを入れておくと、あとから VS Code を開くときに楽になりますのでおススメです。
 ![VS Code Setup Dialog](./assets/VSCodeSetup001.png)
 
 ### Visual Studio Code に Extensions をインストールする
