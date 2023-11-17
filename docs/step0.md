@@ -1,7 +1,5 @@
 # このハンズオンラボを始めるまえに必要な環境設定
 
-## 事前準備
-
 ## ハンズオン実施環境
 本ハンズオンは、以下の OS で実施することが可能です。
 - Windows 11 / 10
@@ -74,7 +72,7 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 ### ツール
 このデモをデプロイするためには、以下のツールが必要です。Azure Cloud Shellに、以下が事前にインストールされていることをご確認ください。PowerShellを前提としています。
 
-| ツール名 | 確認コマンド | 推奨バージョン | 
+| ツール名 | 確認コマンド | 推奨バージョン |
 | --- | --- | --- |
 | [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) | `az --version` | 2.50.0 以降 |
 | [Python 3+](https://www.python.org/downloads/) | `python --version` | 3.9.14 以降 |
@@ -94,16 +92,16 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 
 ## ツール
 このデモをデプロイするためには、ローカルに以下の開発環境が必要です。
+> **重要** このサンプルは Windows もしくは Linux 環境で動作します。ただし、WSL2 の環境では正常に動作しません。
 
 | ツール名 | 確認コマンド | 推奨バージョン | 
 | --- | --- | --- |
 | [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) | `az --version` | 2.50.0 以降 |
+| [Azure Developer CLI](https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-windows) | `azd --version` | 2.50.0 以降 |
 | [Python 3+](https://www.python.org/downloads/) | `python --version` | 3.9.14 以降 |
 | pip ( Pythonと一緒にインストール ) | `pip --version` | 23.1.2 以降 |
 | [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
 | [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
-
-
 
 ## Azure CLI の準備
 
@@ -216,7 +214,9 @@ azd config set defaults.subscription サブスクリプションID
 !> サブスクリプション ID は、先ほど Azure CLI のセットアップ時にメモした id の値 (GUID) を入力します
 
 ## Python のインストール
-今回のハンズオンでは、Python 3.9 で書かれたサンプルコードを利用します。（最新版にまだアップデートできておらずすみません！）
+今回のハンズオンでは、Python 3.9 で書かれたサンプルコードを利用します。
+- **重要**: Windows 環境では、python および pip を Path 環境変数に含める必要があります。
+- **重要**: `python --version` で現在インストールされている Python のバージョンを確認することができます。 Ubuntu を使用している場合、`sudo apt install python-is-python3` で `python` と `python3` をリンクさせることができます。 
 
 [Python のダウンロードサイト](https://www.python.org/downloads/)から、お使いの OS に合った Python 3.9 系のインストーラーをダウンロードしてきて、インストールしてください。
 
@@ -227,7 +227,7 @@ https://www.python.org/downloads/
 ## Node.js のインストール
 今回のハンズオンでは、Node.js で書かれたサンプルコードも利用します。
 
-[Node.js のダウンロードサイト](https://nodejs.org/en/download) からお使いの OS にあった Node.js 最新版のインストーラーをダウンロードしてインストールしてください。
+[Node.js のダウンロードサイト](https://nodejs.org/en/download) からお使いの OS にあった Node.js 16 系のインストーラーをダウンロードしてインストールしてください。
 
 Downloads | Node.js<br>
 https://nodejs.org/en/download
@@ -240,7 +240,7 @@ https://nodejs.org/en/download
 > インストール時に色々聞かれますが、基本的には全てデフォルト設定で問題ないはずです。
 
 ## PowerShell 7 のインストール
-Windows 環境でハンズオンを実施中の方は、PowerShell 7 のセットアップも必要です、
+Windows 環境でハンズオンを実施中の方は、PowerShell 7 のセットアップも必要です。
 
 [PowerShell 7 のダウンロードサイト](https://github.com/PowerShell/PowerShell/releases/tag/v7.3.6) よりインストーラーをダウンロードして、インストールしてください。
 
@@ -248,15 +248,7 @@ PowerShell<br>
 https://github.com/PowerShell/PowerShell/releases/tag/v7.3.6
 
 インストール途中に出てくる下記ダイアログの、下二つのチェックは入れておくとコンテキストメニューから PowerShell を開けるようになっておススメです。
-![PowerShell のインストールオプション](./img/powershellinstall.png)
-
-## .NET SDK のインストール
-今回のハンズオンのサンプルソースコードに、.NET 7.0 ベースのソリューションが含まれているためインストールが必要です。
-
-[.NET 7 のダウンロードサイト](https://dotnet.microsoft.com/ja-jp/download/dotnet/7.0) より最新の SDK をダウンロードしてインストールしてください。
-
-.NET SDK<br>
-https://dotnet.microsoft.com/ja-jp/download/dotnet/7.0
+![PowerShell のインストールオプション](./assets/powershellinstall.png)
 
 ## Visual Studio Code の準備
 ### Visual Studio Code のインストール
@@ -266,15 +258,13 @@ Download Visual Studio Code<br>
 https://code.visualstudio.com/download
 
 > VS Code のセットアップ時に、以下の追加タスクのダイアログの、上二つのチェックボックス（[Code で開く] アクションを追加する）にチェックを入れておくと、あとから VS Code を開くときに楽になりますのでおススメです。
-![VS Code Setup Dialog](./img/VSCodeSetup001.png)
-
-
+![VS Code Setup Dialog](./assets/VSCodeSetup001.png)
 
 ### Visual Studio Code に Extensions をインストールする
 VS Code への Extensions のインストールは、VS Code 起動後のサイドバーにある "Extensions" のアイコンから行います。
 下記スクリーンショットの赤枠で囲んだアイコンです。
 
-![VS Code Extensions](./img/VSCodeExt001.png)
+![VS Code Extensions](./assets/VSCodeExt001.png)
 
 "Search Extensions in Marketplace" のテキストボックスから、名前検索が出来ますので、以下にリストした Extensions を探してインストールしてください。
 
@@ -282,41 +272,8 @@ VS Code への Extensions のインストールは、VS Code 起動後のサイ�
 - Python Extension Pack
 - Azure Tools
   - Azure Tools のセットアップ途中で、azd のセットアップや Azure へのログインなど求められますが、最低限 Azure へのログインさえ出来ていればあとは必要な時に必要な操作を求められるはずなので、一番下の "Mark Done" をクリックして完了させてしまって構いません。
-- C#
 
 完了したら、VS Code にフォーカスを当てた状態で <kbd>F1</kbd> キーを押して、"reload" と検索し "Developer: Reload Window" を実行し、VS Code に先ほどインストールしたプラグインが正しく読み込まれるようにしてください。
-
-# 補足情報
-## VS Code で Python を利用可能にするところまでのトレーニング
-Microsoft Learn に VS Code に Python をセットアップする部分をまとめた技術トレーニングがありました。
-こちらも是非参考にしてみてください。
-
-Visual Studio Code で Python を使ってみる<br>
-https://learn.microsoft.com/ja-jp/training/modules/python-install-vscode/
-
-## VS Code で Azure にアクセスする部分の公式ドキュメント
-Azure 開発用に VS Code をセットアップする方法はこちらにもまとまっていますのでご確認ください。
-
-Azure 開発用に Visual Studio Code を構成する<br>
-https://learn.microsoft.com/ja-jp/dotnet/azure/configure-vs-code
-
-#### ローカル開発環境 ----
-このデモをデプロイするためには、ローカルに以下の開発環境が必要です。
-> **重要** このサンプルは Windows もしくは Linux 環境で動作します。ただし、WSL2 の環境では正常に動作しません。
-- [Azure Developer CLI](https://aka.ms/azure-dev/install) （version 1.0.2以降推奨）
-- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) （version 2.50.0以降推奨）
-- [Python 3+](https://www.python.org/downloads/)（version 3.11以降推奨）
-    - **重要**: Windows 環境では、python および pip を Path 環境変数に含める必要があります。
-    - **重要**: `python --version` で現在インストールされている Python のバージョンを確認することができます。 Ubuntu を使用している場合、`sudo apt install python-is-python3` で `python` と `python3` をリンクさせることができます。    
-- [Node.js](https://nodejs.org/en/download/)（version 14.18以降推奨）
-- [Git](https://git-scm.com/downloads)
-- [Powershell 7+ (pwsh)](https://github.com/powershell/powershell) - Windows で実行する場合のみ
-   - **重要**: `pwsh.exe` が PowerShell コマンドとして実行できることを確認して下さい。
-
->注意: 実行するユーザの AAD アカウントは、`Microsoft.Authorization/roleAssignments/write` 権限を持っている必要があります。この権限は [ユーザーアクセス管理者](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) もしくは [所有者](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#owner)が保持しています。  
-`az role assignment list --assignee <your-Azure-email-address> --subscription <subscription-id> --output table`
-
-### インストール
 
 #### プロジェクトの初期化
 
@@ -324,24 +281,6 @@ https://learn.microsoft.com/ja-jp/dotnet/azure/configure-vs-code
 1. `azd auth login` を実行します。
 1. `azd init` を実行します。
     * 現在、このサンプルに必要な Azure Open AI のモデルは該当モデルをサポートしている**東日本**リージョンにデプロイすることが可能です。最新の情報は[こちら](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)を参考にしてください。
-
-#### スクラッチでの開始
-
-新規に環境をデプロイする場合は、以下のコマンドを実行してください。
-
-1. `az login`と`az account set -s YOUR_SUBSCRIPTION_ID`後に、`az ad user show --id your_account@your_tenant -o tsv --query id` を実行して、操作をするユーザの AAD アカウントのオブジェクトID を取得します。
-1. 取得したオブジェクトID を環境変数`AZURE_PRINCIPAL_ID`にセットします。
-    - Windows 環境で実行している場合は、`$Env:AZURE_PRINCIPAL_ID="Your Object ID"`を実行します。
-    - Linux 環境で実行している場合は、`export AZURE_PRINCIPAL_ID="Your Object ID"`を実行します。
-1. `azd up` を実行します。- このコマンドを実行すると、Azure上に必要なリソースをデプロイし、アプリケーションのビルドとデプロイが実行されます。また、`./data`配下の PDF を利用して Search Index を作成します。
-    - Linux 環境で実行している場合は、`chmod +x scripts/prepdocs.sh`
-1. コマンドの実行が終了すると、アプリケーションにアクセスする為の URL が表示されます。この URL をブラウザで開き、サンプルアプリケーションの利用を開始してください。  
-
-コマンド実行結果の例：
-
-!['Output from running azd up'](assets/endpoint.png)
-    
-> 注意: アプリケーションのデプロイ完了には数分かかることがあります。"Python Developer" のウェルカムスクリーンが表示される場合は、数分待ってアクセスし直してください。
 
 #### アプリケーションのローカル実行 {#run_app_locally}
 アプリケーションをローカルで実行する場合には、以下のコマンドを実行してください。`azd up`で既に Azure 上にリソースがデプロイされていることを前提にしています。
@@ -376,6 +315,21 @@ GPT-4 モデルは、チャット機能、文書検索機能のオプション�
 ### Easy Authの設定（オプション）
 必要に応じて、Azure AD に対応した Easy Auth を設定します。Easy Auth を設定した場合、UI の右上にログインユーザのアカウント名が表示され、チャットの履歴ログにもアカウント名が記録されます。
 Easy Auth の設定は、[こちら](https://learn.microsoft.com/ja-jp/azure/app-service/scenario-secure-app-authentication-app-service)を参考にしてください。
+
+# 補足情報
+## VS Code で Python を利用可能にするところまでのトレーニング
+Microsoft Learn に VS Code に Python をセットアップする部分をまとめた技術トレーニングがありました。
+こちらも是非参考にしてみてください。
+
+Visual Studio Code で Python を使ってみる<br>
+https://learn.microsoft.com/ja-jp/training/modules/python-install-vscode/
+
+## VS Code で Azure にアクセスする部分の公式ドキュメント
+Azure 開発用に VS Code をセットアップする方法はこちらにもまとまっていますのでご確認ください。
+
+Azure 開発用に Visual Studio Code を構成する<br>
+https://learn.microsoft.com/ja-jp/dotnet/azure/configure-vs-code
+
 
 </code>
 </pre>
