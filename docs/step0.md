@@ -69,7 +69,18 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 <pre>
 <code>
 
-### Cloud Shell
+## Cloud Shell
+
+### ツール
+このデモをデプロイするためには、以下のツールが必要です。Azure Cloud Shellに、以下が事前にインストールされていることをご確認ください。PowerShellを前提としています。
+
+| ツール名 | 確認コマンド | 推奨バージョン | 
+| --- | --- | --- |
+| [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) | `az --version` | 2.50.0 以降 |
+| [Python 3+](https://www.python.org/downloads/) | `python --version` | 3.9.14 以降 |
+| pip ( Pythonと一緒にインストール ) | `pip --version` | 23.1.2 以降 |
+| [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
+| [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
 
 </code>
 </pre>
@@ -80,6 +91,19 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 <details><summary>詳細</summary>
 <pre>
 <code>
+
+## ツール
+このデモをデプロイするためには、ローカルに以下の開発環境が必要です。
+
+| ツール名 | 確認コマンド | 推奨バージョン | 
+| --- | --- | --- |
+| [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) | `az --version` | 2.50.0 以降 |
+| [Python 3+](https://www.python.org/downloads/) | `python --version` | 3.9.14 以降 |
+| pip ( Pythonと一緒にインストール ) | `pip --version` | 23.1.2 以降 |
+| [Node.js](https://nodejs.org/en/download/) | `node --version` | 16.19.1 以降 |
+| [Git](https://git-scm.com/downloads) | `git --version` | 2.33.8 以降 |
+
+
 
 ## Azure CLI の準備
 
