@@ -8,10 +8,10 @@
 デモアプリは以下のように動作します。
 
 ## Architecture
-![RAG Architecture](docs/assets/appcomponents.png)
+![RAG Architecture](assets/appcomponents.png)
 
 ## UI
-![Chat screen]docs/assets/chatscreen.png)
+![Chat screen](assets/chatscreen.png)
 
 ## セットアップガイド
 
@@ -71,7 +71,7 @@
 
 コマンド実行結果の例：
 
-!['Output from running azd up'](docs/assets/endpoint.png)
+!['Output from running azd up'](assets/endpoint.png)
     
 > 注意: アプリケーションのデプロイ完了には数分かかることがあります。"Python Developer" のウェルカムスクリーンが表示される場合は、数分待ってアクセスし直してください。
 
