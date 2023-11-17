@@ -28,5 +28,5 @@ az role assignment list --assignee $ENV:USER_ID --subscription $ENV:SUB --output
 ```PowerShell
 mkdir <作業用フォルダ名>
 cd <作業用フォルダ名>
-git clone https://github.com/XXXX/jp-azureopenai-samplesXXXX
+git clone https://github.com/ms-demos-site/aoai-handson-src.git
 ```
