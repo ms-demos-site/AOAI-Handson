@@ -51,6 +51,7 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 
 #### クラウド実行環境
 このデモをデプロイすると以下のリソースが Azure サブスクリプション上に作成されます。
+
 | サービス名 | SKU | Note |
 | --- | --- | --- |
 |Azure App Service|S1||
@@ -74,7 +75,7 @@ Azure の Subscription の準備が出来たら、[Azure OpenAI の利用申請]
 </pre>
 </details>
 
-#### ローカル開発環境
+#### ローカル開発環境（オプション）
 
 <details><summary>詳細</summary>
 <pre>
